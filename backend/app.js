@@ -383,8 +383,8 @@ sequelize
       console.log(`Server berjalan pada port ${PORT}`);
 
       // === SETUP URL BACKEND ===
-      // const backendUrl = `https://order-kue-production.up.railway.app`; // railway
-      const backendUrl = `https://e5f7a41205bf.ngrok-free.app`; // ngrok
+      const backendUrl = `https://order-kue-production-7b56.up.railway.app`; // railway
+      // const backendUrl = `https://e5f7a41205bf.ngrok-free.app`; // ngrok
       // const backendUrl = `http://localhost:5000`;
       // const backendUrl = `http://127.0.0.1:5000`; // sama seperti localhost, tapi versi IPv4
       // const backendUrl = `http://140.0.67.211:5000`; // IP Public Router Rumah
