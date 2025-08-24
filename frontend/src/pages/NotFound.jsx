@@ -1,21 +1,21 @@
 // pages/404.jsx
-import { useState } from 'react';
-import GLBViewer from '../components/GLBViewer/GLBViewer';
+// import { useState } from 'react';
+// import GLBViewer from '../components/GLBViewer/GLBViewer';
 
 export default function NotFound() {
-  const [showModel, setShowModel] = useState(true);
+  // const [showModel, setShowModel] = useState(true);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-600 via-purple-600 to-white text-white text-center px-4 space-y-8 relative">
       {/* 3D Model Display */}
-      {showModel && (
+      {/* {showModel && (
         <div className="w-64 h-64 mb-4 relative z-10">
           <GLBViewer
             path="/assets/3D/red-velvet-brownies.glb"
             autoRotate={true}
           />
         </div>
-      )}
+      )} */}
 
       {/* 404 Title */}
       <h1 className="text-7xl font-bold z-10">404</h1>
