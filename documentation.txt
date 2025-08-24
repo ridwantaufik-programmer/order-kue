@@ -1,0 +1,59 @@
+Catatan Ridwan ReactJs+NodeJs+ExpressJs anjay
+
+export database local ke postgresql :
+pg_dump -U postgres -W -F p -d db_orderkue -f sql_terbaru_setelah_improvement_ke2.sql
+
+import database postgreSQL local ke railway :
+1. Create PostgreSQL di railway
+2. dapatkan informasi variable dan akses postgres public network
+3. Sesuaikan perintah di terminal & directory sql-nya :
+psql -h junction.proxy.rlwy.net -U postgres -p 50686 -d railway -f "db_orderkue.sql"
+4. Masukkan password yang diminta
+5. Selesai !
+
+import database postgreSQL local :
+psql -U postgres -d db_orderkue -f "D:\New folder\Data Ridwan\DEVELOPER IT\JS\Project\reactJs-NodeJs\order-kue\sql_terbaru_setelah_improvement.sql"
+
+
+Aktifkan ngrok (jika backend menggunakan ip/url ngrok) :
+1. Buka terminal sembarang/bebas
+2. Sesuaikan port di backend (misal app.js)
+3. commandline : ngrok http 5000
+
+Jalankan development reactJs :
+1. Buka terminal di pake app.js yg backendUrl nya railway. kalo belum deploy maka deploy dulu project backend-nya
+
+2. Kalo deploy di vercel maka itu hanya frontend,2. commandline : npm start
+Jalankan development nodeJs/expressJs :
+1. Buka terminal di directory backend
+2. cek file route parent, misal app.js atau server.js
+3. commandline : node app.js (jika menggunakan nodemon : nodemon app.js)
+
+Pemanggilan API di backend :
+1. Kalo deploy atau menjalankan menggunakan railway maka pake app.js yg backendUrl nya railway. kalo belum deploy maka deploy dulu project backend-nya
+2. Kalo deploy di vercel itu hanya frontend, untuk backend harus pake ngrok, sudah saya atur. Caranya ubah file 'backend/app(inipakengrokbackendnnya).js' menjadi app.js. Dan 'app.js' (konfigurasi railway) rename saja.
+3. Atur sesuai kebutuhan
+
+Upload file atau icon di GitHub :
+1. Saat ini file yg berhubungan ada di backend/controlleres/mProductsController.js
+2. konfigurasi dengan comment dan uncomment code yg sudah diatur di keterangan masing-masing comment. Untuk GitHub dan untuk repo local
+
+====================================================================================================
+Konsep penyimpanan data :
+text, file(jpg, png, pdf, excel, txt, dsb) harus ditaruh di penyimpanan storage(local atau cloud), bukan di database (database hanya data berbentuk huruf dan bilangan).
+
+Konsep penyimpanan folder/project frontend :
+ditempatkan di GitHub atau local
+
+Konsep penyimpanan folder/project backend :
+ditempatkan di GitHub atau local
+
+Adapun untuk deploy agar diakses oleh user dalam bentuk UI Frontend perlu dideploy, dapat di vercel atau railway, begitu juga backend. Saat ini saya men-deploy frontend di vecel, men-deploy backend di railway
+====================================================================================================
+
+GENERATE KODE PUML :
+https://www.plantuml.com, atau
+CTR + SHIFT + P > PlantUML: Preview Current Diagram (download dulu ekstensi : PlantUML, atau sejenisnya)
+
+GENERATE KODE .MD / .MMD :
+CTR + SHIFT + P > Markdown: preview (download dulu ekstensi : Markdown preview, atau sejenisnya)
